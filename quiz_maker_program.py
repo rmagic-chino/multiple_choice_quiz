@@ -14,10 +14,13 @@ def submit_question():
     option_c = entry_option_c.get()
     option_d = entry_option_d.get()
     correct_answer = correct_option.get()
-    
-    #set rules and conditions
 
+    #set rules and conditions
+    if not question or not option_a or not option_b or not option_c or not option_d or correct_answer not in ['a', 'b', 'c', 'd']:
+        messagebox.showerror("Input Error", "Please fill all fields correctly.")
+        return
 #set function for saving into a file
+
 
 #set a function for exit
 
