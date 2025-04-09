@@ -53,7 +53,22 @@ def save_question_to_file():
         title="Save Questions As"
     )
     
-    #create labels and input fields
+    #write questions to chosen file
+    if file_path:
+        try:
+            with open(file_path, 'w') as file:
+                for q in question_bank:
+                    file.write(f"Question: {q['question']}\n")
+                    file.write(f"A: {q['a']}\n")
+                    file.write(f"B: {q['b']}\n")
+                    file.write(f"C: {q['c']}\n")
+                    file.write(f"D: {q['d']}\n")
+                    file.write(f"Correct: {q['correct']}\n")
+
+            messagebox.showinfo("Saved", f"Questions saved to:\n{file_path}")
+        except Exception as error:
+            messagebox.showerror("Error", f"Failed to save questions:\n{error}")
+
     #create buttons
 
 #run program
