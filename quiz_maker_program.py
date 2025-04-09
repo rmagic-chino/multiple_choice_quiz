@@ -20,7 +20,7 @@ def submit_question():
         messagebox.showerror("Input Error", "Please fill all fields correctly.")
         return
     
-#set function for saving into a file
+#store questions in list
     question_data = {
         'question': question,
         'a': option_a,
@@ -31,9 +31,28 @@ def submit_question():
     }
     question_bank.append(question_data)    
 
-#set a function for exit
+#clear input fields
+    entry_question.delete(0, tk.END)
+    entry_option_a.delete(0, tk.END)
+    entry_option_b.delete(0, tk.END)
+    entry_option_c.delete(0, tk.END)
+    entry_option_d.delete(0, tk.END)
+    correct_option.set(None)
 
-#create GUI window
+    messagebox.showinfo("Success", "Question added successfully!")
+
+def save_question_to_file():
+    if not question_bank:
+        messagebox.showwarning("Warning", "No questions to save.")
+        return
+
+#open save dialog
+    file_path = filedialog.asksaveasfilename(
+        defaultextension=".txt",
+        filetypes=[("Text files", "*.txt")],
+        title="Save Questions As"
+    )
+    
     #create labels and input fields
     #create buttons
 
