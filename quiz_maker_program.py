@@ -69,7 +69,11 @@ def save_question_to_file():
         except Exception as error:
             messagebox.showerror("Error", f"Failed to save questions:\n{error}")
 
-    #create buttons
+    #ask user to save questions before exiting
+def exit_progam():
+    if messagebox.askyesno("Exit", "Do you want to save questions before exiting?"):
+        save_question_to_file()
+    root.destroy()
 
 #run program
 
