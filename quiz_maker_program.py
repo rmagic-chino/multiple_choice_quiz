@@ -19,8 +19,17 @@ def submit_question():
     if not question or not option_a or not option_b or not option_c or not option_d or correct_answer not in ['a', 'b', 'c', 'd']:
         messagebox.showerror("Input Error", "Please fill all fields correctly.")
         return
+    
 #set function for saving into a file
-
+    question_data = {
+        'question': question,
+        'a': option_a,
+        'b': option_b,
+        'c': option_c,
+        'd': option_d,
+        'correct': correct_answer
+    }
+    question_bank.append(question_data)    
 
 #set a function for exit
 
