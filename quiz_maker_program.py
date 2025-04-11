@@ -70,7 +70,7 @@ def save_question_to_file():
             messagebox.showerror("Error", f"Failed to save questions:\n{error}")
 
     #ask user to save questions before exiting
-def exit_progam():
+def exit_program():
     if messagebox.askyesno("Exit", "Do you want to save questions before exiting?"):
         save_question_to_file()
     root.destroy()
@@ -113,3 +113,9 @@ tk.Radiobutton(radio_frame, text="b", variable=correct_option, value='b').pack(s
 tk.Radiobutton(radio_frame, text="c", variable=correct_option, value='c').pack(side=tk.LEFT)
 tk.Radiobutton(radio_frame, text="d", variable=correct_option, value='d').pack(side=tk.LEFT)
 
+#buttons
+tk.Button(root, text="Add Question", width=20, command=submit_question).pack(pady=15)
+tk.Button(root, text="Exit", width=20, command=exit_program).pack()
+
+#start program
+root.mainloop()
