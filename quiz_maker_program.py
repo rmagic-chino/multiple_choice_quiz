@@ -75,6 +75,9 @@ def exit_progam():
         save_question_to_file()
     root.destroy()
 
-#run program
+#create main window
+root = tk.Tk()
+root.title("Question Entry Tool")
+root.geometry("420x520")
 
 #End
