@@ -100,3 +100,16 @@ entry_option_c.pack()
 tk.Label(root, text="Option d:").pack()
 entry_option_d = tk.Entry(root, width=60)
 entry_option_d.pack()
+
+#correct answer selection
+tk.Label(root, text="Select the correct answer:").pack()
+correct_option = tk.StringVar()
+
+radio_frame = tk.Frame(root)
+radio_frame.pack()
+
+tk.Radiobutton(radio_frame, text="a", variable=correct_option, value='a').pack(side=tk.LEFT)
+tk.Radiobutton(radio_frame, text="b", variable=correct_option, value='b').pack(side=tk.LEFT)
+tk.Radiobutton(radio_frame, text="c", variable=correct_option, value='c').pack(side=tk.LEFT)
+tk.Radiobutton(radio_frame, text="d", variable=correct_option, value='d').pack(side=tk.LEFT)
+
