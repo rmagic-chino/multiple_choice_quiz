@@ -80,4 +80,23 @@ root = tk.Tk()
 root.title("Question Entry Tool")
 root.geometry("420x520")
 
-#End
+#question input fields
+tk.Label(root, text="Enter your question:").pack()
+entry_question = tk.Entry(root, width=60)
+entry_question.pack()
+
+tk.Label(root, text="Option a:").pack()
+entry_option_a = tk.Entry(root, width=60)
+entry_option_a.pack()
+
+tk.Label(root, text="Option b:").pack()
+entry_option_b = tk.Entry(root, width=60)
+entry_option_b.pack()
+
+tk.Label(root, text="Option c:").pack()
+entry_option_c = tk.Entry(root, width=60)
+entry_option_c.pack()
+
+tk.Label(root, text="Option d:").pack()
+entry_option_d = tk.Entry(root, width=60)
+entry_option_d.pack()
