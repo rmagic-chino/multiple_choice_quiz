@@ -63,7 +63,7 @@ tk.Button(
     text="Load Questions",
     command=load_questions,
     font=("Arial", 14),
-),pack(pady=10)
+).pack(pady=10)
 
 question_label = tk.Label(
     root,
@@ -82,4 +82,6 @@ button_d = tk.Button(root, text="D", width=30, command=lambda: check('d'))
 
 for button in [button_a, button_b, button_c, button_d]:
     button.pack(pady=5)
-    
+
+#run program
+root.mainloop()
