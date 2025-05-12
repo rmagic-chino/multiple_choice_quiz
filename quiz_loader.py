@@ -54,8 +54,26 @@ root.geometry("450x400")
 root.resizable(False, False)
 root.config(bg="#111")
 
+questions = []
+current = {}
 
 #setup labels
+tk.Button(
+    root,
+    text="Load Questions",
+    command=load_questions,
+    font=("Arial", 14),
+),pack(pady=10)
+
+question_label = tk.Label(
+    root,
+    text="Load a quiz file to start",
+    font=("Arial", 14),
+    bg="#111",
+    fg="#white"
+)
+question_label.pack(pady=20)
+
 #setup buttons
 
 #run the main loop
