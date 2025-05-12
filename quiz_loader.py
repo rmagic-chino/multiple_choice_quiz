@@ -48,6 +48,13 @@ def check(ans):
     next_question()
     
 #setup window
+root = tk.Tk()
+root.title("Quiz App")
+root.geometry("450x400")
+root.resizable(False, False)
+root.config(bg="#111")
+
+
 #setup labels
 #setup buttons
 
