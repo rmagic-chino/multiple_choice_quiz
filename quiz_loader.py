@@ -40,7 +40,13 @@ def next_question():
     button_d.config(text=current['d'])
     
 #command for answers
-
+def check(ans):
+    if ans == current['correct']:
+        messagebox.showinfo("Correct", "🔥 Tama pre!")
+    else:
+        messagebox.showinfo("Incorrect", "❌ Mali sagot!")
+    next_question()
+    
 #setup window
 #setup labels
 #setup buttons
