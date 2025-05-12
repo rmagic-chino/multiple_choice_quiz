@@ -31,6 +31,13 @@ def next_question():
         messagebox.showinfo("Done", "Quiz Finished!.")
         root_destroy()
         return
+    current = random.choice(questions)
+    questions.remove(current)
+    question_label.config(text=current['q'])
+    button_a.config(text=current['a'])
+    button_b.config(text=current['b'])
+    button_c.config(text=current['c'])
+    button_d.config(text=current['d'])
     
 #command for answers
 
