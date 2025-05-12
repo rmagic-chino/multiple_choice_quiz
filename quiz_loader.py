@@ -12,9 +12,9 @@ def load_questions():
     with open(path, 'r') as file:
         blocks = file.read().strip().split('\n\n')
     for block in blocks:
-        lines = block,strip().split('\n')
+        lines = block.strip().split('\n')
         if len(lines) == 6:
-            question.append({
+            questions.append({
                 'q': lines[0][9:], 'a': lines[1][3:], 'b': lines[2][3:],
                 'c': lines[3][3:], 'd': lines[4][3:], 'correct': lines[5][9:]
             })
