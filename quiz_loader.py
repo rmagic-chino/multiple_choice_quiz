@@ -29,7 +29,7 @@ def next_question():
     global current
     if not questions:
         messagebox.showinfo("Done", "Quiz Finished!.")
-        root_destroy()
+        root.destroy()
         return
     current = random.choice(questions)
     questions.remove(current)
@@ -70,7 +70,7 @@ question_label = tk.Label(
     text="Load a quiz file to start",
     font=("Arial", 14),
     bg="#111",
-    fg="#white"
+    fg="white"
 )
 question_label.pack(pady=20)
 
