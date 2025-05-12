@@ -22,10 +22,16 @@ def load_questions():
     if questions:
          next_question()
     else:
-        messagebox.showinfo("info", "No questions found in the file.")
+        messagebox.showinfo("Info", "No questions found in the file.")
         
 #command questions
-
+def next_question():
+    global current
+    if not questions:
+        messagebox.showinfo("Done", "Quiz Finished!.")
+        root_destroy()
+        return
+    
 #command for answers
 
 #setup window
