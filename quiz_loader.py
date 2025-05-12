@@ -75,5 +75,11 @@ question_label = tk.Label(
 question_label.pack(pady=20)
 
 #setup buttons
+button_a = tk.Button(root, text="A", width=30, command=lambda: check('a'))
+button_b = tk.Button(root, text="B", width=30, command=lambda: check('b'))
+button_c = tk.Button(root, text="C", width=30, command=lambda: check('c'))
+button_d = tk.Button(root, text="D", width=30, command=lambda: check('d'))
 
-#run the main loop
+for button in [button_a, button_b, button_c, button_d]:
+    button.pack(pady=5)
+    
