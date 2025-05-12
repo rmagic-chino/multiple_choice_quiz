@@ -9,6 +9,16 @@ def load_questions():
     path = filedialog.askopenfilename(filetypes=[("Text files", "*.txt")])
     if not path:
         return
+    with open(path, 'r') as file:
+        blocks = file.read().strip().split('\n\n')
+    for block in blocks:
+        lines = block,strip().split('\n')
+        if len(lines) == 6:
+            question.append({
+                'q': lines[0][9:], 'a': lines[1][3:], 'b': lines[2][3:],
+                'c': lines[3][3:], 'd': lines[4][3:], 'correct': lines[5][9:]
+            })
+     
 #command questions
 
 #command for answers
